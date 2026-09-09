@@ -1,0 +1,317 @@
+.procurementSection {
+  background: none;
+  padding: 40px 0 90px 0;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.mainHeading {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #081423;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checklistItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.checkText {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+/* Right Column: Form Card */
+.formColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroupFull {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.formInput {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 11px 14px;
+  font-size: 13.5px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formInput::placeholder {
+  color: #94a3b8;
+}
+
+.formInput:focus {
+  border-color: #4a6e8c;
+  box-shadow: 0 0 0 2px rgba(74, 110, 140, 0.2);
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.formSelect {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 11px 36px 11px 14px;
+  font-size: 13.5px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formSelect:focus {
+  border-color: #4a6e8c;
+  box-shadow: 0 0 0 2px rgba(74, 110, 140, 0.2);
+}
+
+.formSelect option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.selectChevron {
+  position: absolute;
+  right: 14px;
+  pointer-events: none;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formTextarea {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 11px 14px;
+  font-size: 13.5px;
+  color: #0f172a;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.5;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formTextarea::placeholder {
+  color: #94a3b8;
+}
+
+.formTextarea:focus {
+  border-color: #4a6e8c;
+  box-shadow: 0 0 0 2px rgba(74, 110, 140, 0.2);
+}
+
+.submitBtn {
+  margin-top: 6px;
+  width: 100%;
+  background-color: #081423;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.submitBtn:hover {
+  background-color: #152d4d;
+  transform: translateY(-1px);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* Success state */
+.successMessage {
+  padding: 32px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.successIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(223, 171, 95, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.successTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #081423;
+}
+
+.successText {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  max-width: 320px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .procurementSection {
+    padding: 30px 0 70px 0;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .infoColumn {
+    padding-right: 0;
+  }
+
+  .mainHeading {
+    font-size: 30px;
+  }
+
+  .formCard {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 540px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .mainHeading {
+    font-size: 26px;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+}

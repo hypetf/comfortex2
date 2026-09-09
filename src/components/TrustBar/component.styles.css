@@ -1,0 +1,89 @@
+.trustBarSection {
+  padding-bottom: 84px;
+  background-color: #ffffff;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.trustBarCard {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.trustBarItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1;
+}
+
+.trustBarIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  flex-shrink: 0;
+}
+
+.trustBarIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-gold);
+}
+
+.trustBarContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.trustBarTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin-bottom: 4px;
+}
+
+.trustBarDesc {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--color-slate-600);
+}
+
+.trustBarDivider {
+  width: 1px;
+  height: 48px;
+  background-color: #e2e8f0;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .trustBarCard {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .trustBarDivider {
+    width: 100%;
+    height: 1px;
+  }
+  .trustBarItem {
+    padding: 0;
+  }
+}

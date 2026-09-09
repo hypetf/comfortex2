@@ -1,0 +1,131 @@
+.responsibilitySection {
+  background: none;
+  padding: 90px 0 40px 0;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.quoteColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.quoteHeading {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #081423;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Right Column */
+.philosophyColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophyTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #081423;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+.philosophyList {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophyItem {
+  padding: 16px 0 20px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.philosophyItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.philosophyText {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+.highlightText {
+  font-weight: 700;
+  color: #081423;
+}
+
+.dashSeparator {
+  color: #94a3b8;
+  margin: 0 2px;
+}
+
+.descText {
+  color: #475569;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .responsibilitySection {
+    padding: 60px 0 40px 0;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .quoteColumn {
+    padding-right: 0;
+  }
+
+  .quoteHeading {
+    font-size: 30px;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .philosophyTitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quoteHeading {
+    font-size: 26px;
+  }
+
+  .philosophyText {
+    font-size: 14px;
+  }
+}
