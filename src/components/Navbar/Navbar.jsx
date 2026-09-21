@@ -69,12 +69,14 @@ export class Navbar extends Component {
             >
               Request a Quote
             </button>
-            <button
-              type="button"
+            <a
+              href="https://comfortexio.myshopify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.navbarShopBtn}
             >
               Shop Mattresses
-            </button>
+            </a>
 
             {/* Mobile Hamburger Toggle */}
             <button
@@ -111,13 +113,15 @@ export class Navbar extends Component {
               >
                 Request a Quote
               </button>
-              <button
-                type="button"
+              <a
+                href="https://comfortexio.myshopify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.mobileShopBtn}
                 onClick={this.closeMobileMenu}
               >
                 Shop Mattresses
-              </button>
+              </a>
             </div>
           </div>
         )}

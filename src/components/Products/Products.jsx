@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { products } from '../../data/landingData';
-import { ArrowRightIcon } from '../Icons';
+import { ArrowRightIcon } from '../Icons/Icons';
 import styles from './Products.styles.css';
 
 export class Products extends Component {

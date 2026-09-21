@@ -265,32 +265,78 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .capabilitiesVideoSide {
-    min-height: 260px;
+    min-height: 230px;
+  }
+
+  .playButtonCircle {
+    width: 54px;
+    height: 54px;
+  }
+
+  .playTriangleIcon {
+    width: 18px;
+    height: 18px;
   }
 
   .capabilitiesContentSide {
-    padding: 36px 16px;
+    padding: 34px 16px 38px;
   }
 
   .capabilitiesTitle {
-    font-size: 26px;
+    font-size: 24px;
+    line-height: 1.25;
   }
 
   .capabilitiesDescription {
-    font-size: 14px;
-    margin-bottom: 24px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+
+  /* 3x2 Grid for capabilities on mobile */
+  .capabilitiesItemsRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 8px;
+    margin-bottom: 26px;
+    padding-top: 18px;
   }
 
   .capabilityItem {
-    flex: 0 0 50%;
-    padding: 0 8px;
+    width: 100%;
+    flex: none;
+    border-right: none;
+    padding: 0 4px;
     gap: 8px;
+  }
+
+  .capabilityIconWrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .capabilityIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .capabilityLabel {
+    font-size: 11px;
+    line-height: 1.3;
   }
 
   .capabilitiesCtaBtn {
     width: 100%;
+    min-height: 46px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .capabilitiesItemsRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 8px;
   }
 }

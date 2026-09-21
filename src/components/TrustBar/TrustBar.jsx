@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { 
-  IsoBadgeIcon, 
-  UkCrestIcon, 
-  LeafEcoIcon, 
-  ShieldTrustIcon 
-} from '../Icons';
+import {
+  IsoBadgeIcon,
+  UkCrestIcon,
+  LeafEcoIcon,
+  ShieldTrustIcon
+} from '../Icons/Icons';
 import styles from './TrustBar.styles.css';
 
 export class TrustBar extends Component {

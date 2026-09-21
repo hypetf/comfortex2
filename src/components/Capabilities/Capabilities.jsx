@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { 
-  DesignDraftIcon, 
-  CncCuttingIcon, 
-  FoamLayersIcon, 
-  MattressIcon, 
-  QualityAssuranceIcon, 
+import {
+  DesignDraftIcon,
+  CncCuttingIcon,
+  FoamLayersIcon,
+  MattressIcon,
+  QualityAssuranceIcon,
   DeliveryTruckIcon,
   ArrowRightIcon
-} from '../Icons';
+} from '../Icons/Icons';
 import styles from './Capabilities.styles.css';
 
 export class Capabilities extends Component {
@@ -20,9 +20,9 @@ export class Capabilities extends Component {
           {/* Left Side: Video Preview of Factory */}
           <div className={styles.capabilitiesVideoSide}>
             <div className={styles.capabilitiesVideoBg}>
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" 
-                alt="Comfortex factory workshop machinery" 
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+                alt="Comfortex factory workshop machinery"
                 className={styles.capabilitiesVideoImg}
                 loading="lazy"
               />
@@ -50,9 +50,9 @@ export class Capabilities extends Component {
           <div className={styles.capabilitiesContentSide}>
             <div className={styles.capabilitiesInner}>
               <span className={styles.sectionBadge}>OUR CAPABILITIES</span>
-              <h2 className={styles.capabilitiesTitle}>From concept to production.</h2>
+              <h2 className={styles.capabilitiesTitle}>Complete mattress manufacturing under one roof.</h2>
               <p className={styles.capabilitiesDescription}>
-                End-to-end manufacturing under one roof. We combine advanced technology with skilled craftsmanship to deliver consistent quality at every stage.
+                From cutting foam blocks to size and sewing custom covers, to assembling, packing, and delivering finished mattresses. We handle every step in our Oldham factory for healthcare, trade, and retail partners across the UK.
               </p>
 
               {/* 6 Capabilities — single horizontal row */}
@@ -68,7 +68,7 @@ export class Capabilities extends Component {
                   <div className={styles.capabilityIconWrap}>
                     <CncCuttingIcon className={styles.capabilityIcon} />
                   </div>
-                  <span className={styles.capabilityLabel}>CNC Cutting &amp;<br />Shaping</span>
+                  <span className={styles.capabilityLabel}>Precision Cutting<br />&amp; Shaping</span>
                 </div>
 
                 <div className={styles.capabilityItem}>

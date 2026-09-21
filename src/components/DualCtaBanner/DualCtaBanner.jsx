@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CatalogueDocumentIcon } from '../Icons';
+import { CatalogueDocumentIcon } from '../Icons/Icons';
 import styles from './DualCtaBanner.styles.css';
 
 export class DualCtaBanner extends Component {

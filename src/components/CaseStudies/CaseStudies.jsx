@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { caseStudies } from '../../data/landingData';
-import { ArrowRightIcon } from '../Icons';
+import { ArrowRightIcon } from '../Icons/Icons';
 import styles from './CaseStudies.styles.css';
 
 export class CaseStudies extends Component {

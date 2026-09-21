@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
+import { Navbar } from './components/Navbar/Navbar';
+import { Hero } from './components/Hero/Hero';
 import { Industries } from './components/Industries/Industries';
-import { Capabilities } from './components/Capabilities';
-import { Products } from './components/Products';
-import { TrustBar } from './components/TrustBar';
-import { CaseStudies } from './components/CaseStudies';
-import { EnvironmentalResponsibility } from './components/EnvironmentalResponsibility';
-import { ProcurementContact } from './components/ProcurementContact';
-import { DualCtaBanner } from './components/DualCtaBanner';
-import { Footer } from './components/Footer';
+import { Capabilities } from './components/Capabilities/Capabilities';
+import { CustomerLogos } from './components/CustomerLogos/CustomerLogos';
+import { ProductionScale } from './components/ProductionScale/ProductionScale';
+import { Products } from './components/Products/Products';
+import { TrustBar } from './components/TrustBar/TrustBar';
+import { CaseStudies } from './components/CaseStudies/CaseStudies';
+import { EnvironmentalResponsibility } from './components/EnvironmentalResponsibility/EnvironmentalResponsibility';
+import { ProcurementContact } from './components/ProcurementContact/ProcurementContact';
+import { DualCtaBanner } from './components/DualCtaBanner/DualCtaBanner';
+import { Footer } from './components/Footer/Footer';
 import { QuoteModal, VideoModal } from './components/Modals';
 
 class App extends Component {
@@ -73,7 +75,13 @@ class App extends Component {
           {/* 4. Capabilities Video & Features Section */}
           <Capabilities onOpenVideo={this.handleOpenVideo} />
 
-          {/* 5. Products Section */}
+          {/* Customer Logos Marquee */}
+          <CustomerLogos />
+
+          {/* 5. Production Scale & Manufacturing Output */}
+          <ProductionScale />
+
+          {/* 6. Products Section */}
           <Products />
 
           {/* 6. Quality & Trust Bar */}

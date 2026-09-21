@@ -48,8 +48,9 @@
 }
 
 .heroContent {
-  max-width: 620px;
+  max-width: max-content;
   padding: 40px 0 60px;
+  /* border: 1px solid red; */
 }
 
 .heroHeadline {
@@ -62,8 +63,9 @@
 
 .heroTextWhite {
   color: #ffffff;
-  font-size: 4rem;
-  display: block;
+  font-size: 5rem;
+  /* margin-bottom: 1rem; */
+  /* display: block; */
 }
 
 .heroTextGold {
@@ -72,11 +74,11 @@
 }
 
 .heroDescription {
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #cbd5e1;
   margin-bottom: 34px;
-  max-width: 540px;
+  max-width: 600px;
 }
 
 .heroCtaGroup {
@@ -84,6 +86,10 @@
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.heroCtaGroupMobile {
+  display: none;
 }
 
 .heroBtnPrimary {
@@ -227,18 +233,18 @@
   }
 
   .heroHeadline {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .heroTextWhite {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     white-space: normal;
     width: auto;
   }
 
   .heroStatsContainer {
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 16px;
   }
 
   .heroStatItem {
@@ -252,49 +258,181 @@
   }
 }
 
-@media (max-width: 680px) {
-  .heroStatsContainer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 540px) {
+/* Mobile: 90svh height with cohesive centered content */
+@media (max-width: 768px) {
   .heroSection {
-    padding-top: 90px;
+    min-height: 90svh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 86px;
+    padding-bottom: 28px;
+    gap: 18px;
+    overflow: hidden;
+  }
+
+  .heroContainer {
+    padding: 0 18px;
+    flex: none;
+    margin: 0;
+  }
+
+  .heroContent {
+    max-width: 100%;
   }
 
   .heroHeadline {
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 1.16;
+    margin-bottom: 8px;
   }
 
-  .heroTextWhite {
-    font-size: 2rem;
+  .heroTextWhite,
+  .heroTextGold {
+    font-size: 1.85rem;
     white-space: normal;
     width: auto;
-    word-break: normal;
   }
 
   .heroDescription {
-    font-size: 14.5px;
-    margin-bottom: 24px;
+    font-size: 13.5px;
+    line-height: 1.45;
+    margin-bottom: 0;
+    color: #cbd5e1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
+  /* Hide desktop CTA on mobile */
   .heroCtaGroup {
+    display: none;
+  }
+
+  /* Stats wrapper centered closely under the text */
+  .heroStatsWrapper {
+    flex: none;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    gap: 10px;
+    background: transparent;
+    backdrop-filter: none;
+    border-top: none;
+    padding: 0 18px;
+  }
+
+  .heroStatsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .heroStatItem {
+    background: rgba(6, 15, 27, 0.72);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .heroStatItem:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .heroStatIconWrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .heroStatIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .heroStatNumber {
+    font-size: 15px;
+    margin-bottom: 1px;
+  }
+
+  .heroStatLabel {
+    font-size: 10.5px;
+    line-height: 1.25;
+  }
+
+  /* Mobile CTA Buttons right below stats */
+  .heroCtaGroupMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 4px;
   }
 
   .heroBtnPrimary,
   .heroBtnSecondary {
     width: 100%;
-    padding: 0.9rem 1.4rem;
-    text-align: center;
+    min-height: 44px;
+    padding: 9px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    justify-content: center;
+  }
+
+  .iconArrow {
+    margin-left: 6px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroHeadline {
+    font-size: 24px;
+  }
+
+  .heroTextWhite,
+  .heroTextGold {
+    font-size: 1.6rem;
+  }
+
+  .heroDescription {
+    -webkit-line-clamp: 2;
+    font-size: 12.5px;
   }
 
   .heroStatsContainer {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 16px;
+    gap: 6px;
+  }
+
+  .heroStatItem {
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  .heroStatNumber {
+    font-size: 14px;
+  }
+
+  .heroStatLabel {
+    font-size: 9.5px;
+  }
+
+  .heroBtnPrimary,
+  .heroBtnSecondary {
+    min-height: 38px;
+    padding: 7px 10px;
+    font-size: 13px;
   }
 }

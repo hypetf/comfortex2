@@ -183,7 +183,56 @@
 /* Responsive */
 @media (max-width: 900px) {
   .caseStudiesGrid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* One big featured card on top */
+  .caseStudyCard:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  /* The other two side-by-side underneath */
+  .caseStudyCard:nth-child(2),
+  .caseStudyCard:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  /* Top card styling */
+  .caseStudyCard:nth-child(1) .caseStudyImageWrapper,
+  .caseStudyCard:nth-child(1) .caseStudyImage {
+    height: 200px;
+  }
+
+  /* Two smaller cards below */
+  .caseStudyCard:nth-child(2) .caseStudyImageWrapper,
+  .caseStudyCard:nth-child(3) .caseStudyImageWrapper,
+  .caseStudyCard:nth-child(2) .caseStudyImage,
+  .caseStudyCard:nth-child(3) .caseStudyImage {
+    height: 130px;
+  }
+
+  .caseStudyCard:nth-child(2) .caseStudyBody,
+  .caseStudyCard:nth-child(3) .caseStudyBody {
+    padding: 16px 14px;
+  }
+
+  .caseStudyCard:nth-child(2) .caseStudyCardTitle,
+  .caseStudyCard:nth-child(3) .caseStudyCardTitle {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .caseStudyCard:nth-child(2) .caseStudyCardDesc,
+  .caseStudyCard:nth-child(3) .caseStudyCardDesc {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
 
@@ -191,5 +240,53 @@
   .caseStudiesHeader {
     flex-direction: column;
     align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .caseStudiesTitle {
+    font-size: 26px;
+  }
+
+  .btnOutlineCaseStudies {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .caseStudiesGrid {
+    gap: 10px;
+  }
+
+  .caseStudyCard:nth-child(1) .caseStudyImageWrapper,
+  .caseStudyCard:nth-child(1) .caseStudyImage {
+    height: 160px;
+  }
+
+  .caseStudyCard:nth-child(1) .caseStudyBody {
+    padding: 16px 14px;
+  }
+
+  .caseStudyCard:nth-child(1) .caseStudyCardTitle {
+    font-size: 16px;
+  }
+
+  .caseStudyCard:nth-child(2) .caseStudyImageWrapper,
+  .caseStudyCard:nth-child(3) .caseStudyImageWrapper,
+  .caseStudyCard:nth-child(2) .caseStudyImage,
+  .caseStudyCard:nth-child(3) .caseStudyImage {
+    height: 105px;
+  }
+
+  .caseStudyCard:nth-child(2) .caseStudyBody,
+  .caseStudyCard:nth-child(3) .caseStudyBody {
+    padding: 12px 10px;
+  }
+
+  .caseStudyCard:nth-child(2) .caseStudyCardTitle,
+  .caseStudyCard:nth-child(3) .caseStudyCardTitle {
+    font-size: 13.5px;
   }
 }

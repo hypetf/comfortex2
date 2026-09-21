@@ -64,7 +64,7 @@ export class Footer extends Component {
               <p className={styles.footerBrandDesc}>
                 Engineered comfort solutions, manufactured in Oldham, UK. We combine innovation, quality and expertise to deliver products that make a difference.
               </p>
-              
+
               <div className={styles.footerSocialRow}>
                 <a href="#" className={styles.socialLink} aria-label="LinkedIn">
                   <LinkedInIcon />
@@ -107,7 +107,7 @@ export class Footer extends Component {
               © {new Date().getFullYear()} Comfortex Ltd. All rights reserved.
             </div>
             <div className={styles.footerCompanyReg}>
-              Company No. 03212345
+              Company No. 123456789
             </div>
             <div className={styles.footerLegalLinks}>
               <a href="#privacy" className={styles.footerLegalLink}>Privacy Policy</a>

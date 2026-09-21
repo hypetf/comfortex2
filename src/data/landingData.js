@@ -114,7 +114,7 @@ export const products = [
     id: 'foam-products',
     title: 'Foam Products',
     description: 'High quality foam in a range of densities, sizes and finishes.',
-    image: 'https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80',
+    image: 'https://imgs.search.brave.com/gfHaw7IIFXOnBF4jPPiwK-wFQcxXCtW051LdLJbKwO4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pcnAu/Y2RuLXdlYnNpdGUu/Y29tLy9lOWNhOTli/Yy9kbXMzcmVwL211/bHRpL29wdC8yMDIw/MDIyNl8xMjQ0NDct/MTkyMHcuanBn',
     alt: 'Foam materials and blocks',
     ctaText: 'View range',
     link: '#foam-products'
@@ -223,17 +223,17 @@ export const footerColumns = [
       'Specialist Applications'
     ]
   },
-  {
-    title: 'Capabilities',
-    links: [
-      'Design & Engineering',
-      'CNC Cutting',
-      'Foam Manufacturing',
-      'Mattress Production',
-      'Quality Assurance',
-      'Delivery & Support'
-    ]
-  },
+  // {
+  //   title: 'Capabilities',
+  //   links: [
+  //     'Design & Engineering',
+  //     'CNC Cutting',
+  //     'Foam Manufacturing',
+  //     'Mattress Production',
+  //     'Quality Assurance',
+  //     'Delivery & Support'
+  //   ]
+  // },
   {
     title: 'Resources',
     links: [

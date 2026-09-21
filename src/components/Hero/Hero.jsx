@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import heroBgImg from '../../assets/hero_bg.png';
 import {
-  StarBadgeIcon,
-  UkCrestIcon,
-  IsoBadgeIcon,
-  FactoryIcon,
-  ShieldTrustIcon,
-  ArrowRightIcon
-} from '../Icons';
+  Award,
+  MapPin,
+  BadgeCheck,
+  Factory,
+  Handshake,
+  ArrowRight
+} from 'lucide-react';
 import styles from './Hero.styles.css';
 
 export class Hero extends Component {
@@ -39,17 +39,18 @@ export class Hero extends Component {
             <div className={styles.heroCtaGroup}>
               <a href="#products" className={styles.heroBtnPrimary}>
                 <span>Explore our products</span>
-                {/* <ArrowRightIcon className={styles.iconArrow} /> */}
+                {/* <ArrowRight className={styles.iconArrow} /> */}
               </a>
 
-              <button
-                type="button"
+              <a
+                href="https://comfortexio.myshopify.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.heroBtnSecondary}
-                onClick={onOpenQuote}
               >
                 Shop Mattresses Direct
-                <ArrowRightIcon className={styles.iconArrow} />
-              </button>
+                <ArrowRight className={styles.iconArrow} size={15} />
+              </a>
             </div>
           </div>
         </div>
@@ -60,7 +61,7 @@ export class Hero extends Component {
             {/* Stat 1 */}
             <div className={styles.heroStatItem}>
               <div className={styles.heroStatIconWrapper}>
-                <StarBadgeIcon className={styles.heroStatIcon} />
+                <Award className={styles.heroStatIcon} size={22} strokeWidth={1.75} />
               </div>
               <div className={styles.heroStatInfo}>
                 <h3 className={styles.heroStatNumber}>25+</h3>
@@ -71,7 +72,7 @@ export class Hero extends Component {
             {/* Stat 2 */}
             <div className={styles.heroStatItem}>
               <div className={styles.heroStatIconWrapper}>
-                <UkCrestIcon className={styles.heroStatIcon} />
+                <MapPin className={styles.heroStatIcon} size={22} strokeWidth={1.75} />
               </div>
               <div className={styles.heroStatInfo}>
                 <h3 className={styles.heroStatNumber}>UK</h3>
@@ -82,7 +83,7 @@ export class Hero extends Component {
             {/* Stat 3 */}
             <div className={styles.heroStatItem}>
               <div className={styles.heroStatIconWrapper}>
-                <IsoBadgeIcon className={styles.heroStatIcon} />
+                <BadgeCheck className={styles.heroStatIcon} size={22} strokeWidth={1.75} />
               </div>
               <div className={styles.heroStatInfo}>
                 <h3 className={styles.heroStatNumber}>ISO 9001</h3>
@@ -93,7 +94,7 @@ export class Hero extends Component {
             {/* Stat 4 */}
             <div className={styles.heroStatItem}>
               <div className={styles.heroStatIconWrapper}>
-                <FactoryIcon className={styles.heroStatIcon} />
+                <Factory className={styles.heroStatIcon} size={22} strokeWidth={1.75} />
               </div>
               <div className={styles.heroStatInfo}>
                 <h3 className={styles.heroStatNumber}>100k+</h3>
@@ -104,13 +105,30 @@ export class Hero extends Component {
             {/* Stat 5 */}
             <div className={styles.heroStatItem}>
               <div className={styles.heroStatIconWrapper}>
-                <ShieldTrustIcon className={styles.heroStatIcon} />
+                <Handshake className={styles.heroStatIcon} size={22} strokeWidth={1.75} />
               </div>
               <div className={styles.heroStatInfo}>
                 <h3 className={styles.heroStatNumber}>Trusted</h3>
                 <p className={styles.heroStatLabel}>By healthcare, businesses & organisations UK wide</p>
               </div>
             </div>
+          </div>
+
+          {/* Mobile CTA Buttons (positioned at the bottom of 100svh on mobile) */}
+          <div className={styles.heroCtaGroupMobile}>
+            <a href="#products" className={styles.heroBtnPrimary}>
+              <span>Explore our products</span>
+            </a>
+
+            <a
+              href="https://comfortexio.myshopify.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.heroBtnSecondary}
+            >
+              Shop Mattresses Direct
+              <ArrowRight className={styles.iconArrow} size={15} />
+            </a>
           </div>
         </div>
       </section>

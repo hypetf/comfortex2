@@ -42,7 +42,7 @@ const industries = [
   {
     id: 'automotive',
     title: 'Automotive',
-    description: 'High performance foam for automotive.',
+    description: 'High comfort foam for automotive.',
     image: carImg,
     alt: 'Automotive leather interior and seating',
     link: '#automotive'
@@ -69,7 +69,7 @@ const Industries = () => {
           </div>
           <div className={styles.sectionHeaderRight}>
             <p className={styles.sectionDescription}>
-              From medical and healthcare to specialist applications, we manufacture high-quality foam and mattress solutions built for performance and reliability.
+              From medical and healthcare to specialist applications, we manufacture high-quality foam and mattress solutions built for comfort and reliability.
             </p>
           </div>
         </div>
