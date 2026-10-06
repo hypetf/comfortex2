@@ -14,6 +14,7 @@ const industries = [
     image: medicalImg,
     alt: 'Hospital bed with medical mattress',
     link: '#healthcare'
+    // link: '/products#medical-mattresses'
   },
   {
     id: 'bedding',
@@ -22,6 +23,7 @@ const industries = [
     image: beddingImg,
     alt: 'Bedding mattress in modern bedroom',
     link: '#bedding'
+    // link: '/products#domestic-mattresses'
   },
   {
     id: 'furniture',
@@ -30,6 +32,7 @@ const industries = [
     image: furnitureImg,
     alt: 'Foam furniture armchair',
     link: '#furniture'
+    // link: '/products#furniture'
   },
   {
     id: 'marine',
@@ -38,6 +41,7 @@ const industries = [
     image: marineImg,
     alt: 'Luxury boat cockpit and seating',
     link: '#marine'
+    // link: '/products#marine'
   },
   {
     id: 'automotive',
@@ -46,6 +50,7 @@ const industries = [
     image: carImg,
     alt: 'Automotive leather interior and seating',
     link: '#automotive'
+    // link: '/products#automotive'
   },
   {
     id: 'specialist',
@@ -54,10 +59,11 @@ const industries = [
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
     alt: 'Specialist custom cut technical foam parts',
     link: '#specialist'
+    // link: '/products#specialist'
   }
 ];
 
-const Industries = () => {
+const Industries = ({ onNavigateProducts }) => {
   return (
     <section className={styles.industriesSection} id="industries">
       <div className={styles.contentContainer}>
@@ -84,6 +90,15 @@ const Industries = () => {
                 key={item.id}
                 href={item.link || '#'}
                 className={styles.industryCard}
+                onClick={(e) => {
+                  /* Link to /products commented out for now:
+                  if (onNavigateProducts) {
+                    e.preventDefault();
+                    const hash = item.link.includes('#') ? item.link.substring(item.link.indexOf('#')) : '';
+                    onNavigateProducts(hash);
+                  }
+                  */
+                }}
               >
                 {/* Full-bleed background image */}
                 {item.image ? (

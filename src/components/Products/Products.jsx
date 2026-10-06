@@ -49,7 +49,23 @@ export class Products extends Component {
                 <div className={styles.productCardBody}>
                   <h3 className={styles.productCardTitle}>{product.title}</h3>
                   <p className={styles.productCardText}>{product.description}</p>
-                  <a href={product.link || '#'} className={styles.cardLink}>
+                  <a
+                    href={product.link || '#'}
+                    className={styles.cardLink}
+                    onClick={(e) => {
+                      if (product.link === '/configurator' && this.props.onNavigateConfigurator) {
+                        e.preventDefault();
+                        this.props.onNavigateConfigurator();
+                      }
+                      /* Link to /products commented out for now:
+                      else if (product.link && product.link.startsWith('/products') && this.props.onNavigateProducts) {
+                        e.preventDefault();
+                        const hash = product.link.includes('#') ? product.link.substring(product.link.indexOf('#')) : '';
+                        this.props.onNavigateProducts(hash);
+                      }
+                      */
+                    }}
+                  >
                     <span>{product.ctaText || 'View range'}</span>
                     <ArrowRightIcon className={styles.cardLinkIcon} />
                   </a>

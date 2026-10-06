@@ -110,9 +110,31 @@ export class Footer extends Component {
               Company No. 123456789
             </div>
             <div className={styles.footerLegalLinks}>
-              <a href="#privacy" className={styles.footerLegalLink}>Privacy Policy</a>
+              <a
+                href="/privacy"
+                className={styles.footerLegalLink}
+                onClick={(e) => {
+                  if (this.props.onNavigateLegal) {
+                    e.preventDefault();
+                    this.props.onNavigateLegal('privacy');
+                  }
+                }}
+              >
+                Privacy Policy
+              </a>
               <span className={styles.footerLegalSep}></span>
-              <a href="#terms" className={styles.footerLegalLink}>Terms & Conditions</a>
+              <a
+                href="/terms"
+                className={styles.footerLegalLink}
+                onClick={(e) => {
+                  if (this.props.onNavigateLegal) {
+                    e.preventDefault();
+                    this.props.onNavigateLegal('terms');
+                  }
+                }}
+              >
+                Terms &amp; Conditions
+              </a>
             </div>
           </div>
         </div>

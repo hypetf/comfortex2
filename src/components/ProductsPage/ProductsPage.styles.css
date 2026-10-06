@@ -1,0 +1,683 @@
+/* Products Page Styles */
+
+.productsPage {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+/* Page Hero Banner */
+.pageHero {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 56px 24px 44px;
+  position: relative;
+}
+
+.heroContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.heroHeaderGroup {
+  max-width: 860px;
+}
+
+.heroEyebrowBadge {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0284c7;
+  margin-bottom: 12px;
+}
+
+.heroHeading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+}
+
+@media (min-width: 768px) {
+  .heroHeading {
+    font-size: 3.25rem;
+  }
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 28px;
+}
+
+.heroCtaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.heroBtnPrimary {
+  background: #0284c7;
+  color: #ffffff;
+  border: 1px solid #0284c7;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+  cursor: pointer;
+}
+
+.heroBtnPrimary:hover {
+  background: #0369a1;
+  border-color: #0369a1;
+  transform: translateY(-1px);
+}
+
+.heroBtnPhone {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.heroBtnPhone:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+  background: #f0f9ff;
+}
+
+/* Category Quick Jump Bar */
+.categoryFilterSection {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 24px;
+  position: sticky;
+  top: 72px;
+  z-index: 20;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.categoryFilterContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.categoryFilterPill {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #334155;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.categoryFilterPill:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.categoryFilterPillActive {
+  background: #0284c7;
+  border-color: #0284c7;
+  color: #ffffff;
+}
+
+/* Main Content Ranges Container */
+.rangesMainContainer {
+  max-width: 1240px;
+  margin: 48px auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Individual Product / Foam Showcase Section */
+.foamShowcaseCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 140px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foamShowcaseCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Top Media Grid */
+.cardTopGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 992px) {
+  .cardTopGrid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  min-height: 340px;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .imageContainer {
+    min-height: 440px;
+  }
+}
+
+.showcaseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.foamShowcaseCard:hover .showcaseImage {
+  transform: scale(1.03);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+.imageFloatingBadges {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.floatingTag {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Header Text Area inside Card */
+.cardContentArea {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .cardContentArea {
+    padding: 24px 20px;
+  }
+}
+
+.cardHeaderGroup {
+  margin-bottom: 20px;
+}
+
+.cardCategoryBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0284c7;
+  background: #e0f2fe;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.cardMainTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.cardLeadText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+/* Quick specs row */
+.cardSpecsPillRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.specPill {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.specPillLabel {
+  font-size: 0.6875rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.specPillValue {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Bottom 3-Column Technical Deep Dive */
+.cardTechnicalGrid {
+  border-top: 1px solid #f1f5f9;
+  background: #fafcff;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 32px;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .cardTechnicalGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cardTechnicalGrid {
+    padding: 24px 20px;
+    gap: 24px;
+  }
+}
+
+.technicalColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.columnHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.columnIconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.columnTitle {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.columnList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.columnListItem {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #475569;
+  position: relative;
+  padding-left: 18px;
+}
+
+.columnListItem::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: #0284c7;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.columnListItem strong {
+  color: #1e293b;
+}
+
+/* Bottom CTA Actions Bar on Card */
+.cardActionBar {
+  border-top: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 18px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .cardActionBar {
+    padding: 16px 20px;
+  }
+}
+
+.cardActionButtonsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.btnCardConfigure {
+  background: #0284c7;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btnCardConfigure:hover {
+  background: #0369a1;
+}
+
+.btnCardCall {
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btnCardCall:hover {
+  border-color: #0284c7;
+  color: #0284c7;
+  background: #f8fafc;
+}
+
+.actionNote {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+/* Master Foam Grades Table Section */
+.gradesTableSection {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 40px 32px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  scroll-margin-top: 140px;
+}
+
+@media (max-width: 640px) {
+  .gradesTableSection {
+    padding: 24px 16px;
+  }
+}
+
+.tableHeaderGroup {
+  margin-bottom: 28px;
+}
+
+.tableSectionTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
+}
+
+.tableSectionSubtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+  max-width: 760px;
+}
+
+.tableResponsiveWrap {
+  overflow-x: auto;
+}
+
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.specTable th {
+  background: #f8fafc;
+  color: #334155;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 14px 16px;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.specTable td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.875rem;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.specTable tr:hover td {
+  background: #f8fafc;
+}
+
+.gradeBadgeCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gradeSwatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.gradeCodeName {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.firmnessTag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.btnTableConfigure {
+  background: #0284c7;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.btnTableConfigure:hover {
+  background: #0369a1;
+}
+
+/* Bottom Trade Consultation Banner */
+.tradeConsultBanner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 20px;
+  padding: 48px 36px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.2);
+}
+
+.tradeBannerEyebrow {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #38bdf8;
+}
+
+.tradeBannerTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.tradeBannerText {
+  font-size: 1.0625rem;
+  color: #cbd5e1;
+  max-width: 680px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tradeActionsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.btnTradeCall {
+  background: #0284c7;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-size: 1.125rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+}
+
+.btnTradeCall:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+.btnTradeConfig {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btnTradeConfig:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

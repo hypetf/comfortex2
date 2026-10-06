@@ -37,9 +37,17 @@ export class Hero extends Component {
             </p>
 
             <div className={styles.heroCtaGroup}>
-              <a href="#products" className={styles.heroBtnPrimary}>
-                <span>Explore our products</span>
-                {/* <ArrowRight className={styles.iconArrow} /> */}
+              <a
+                href="/configurator"
+                className={styles.heroBtnPrimary}
+                onClick={(e) => {
+                  if (this.props.onNavigateConfigurator) {
+                    e.preventDefault();
+                    this.props.onNavigateConfigurator();
+                  }
+                }}
+              >
+                <span>Build your foam now</span>
               </a>
 
               <a
@@ -116,8 +124,17 @@ export class Hero extends Component {
 
           {/* Mobile CTA Buttons (positioned at the bottom of 100svh on mobile) */}
           <div className={styles.heroCtaGroupMobile}>
-            <a href="#products" className={styles.heroBtnPrimary}>
-              <span>Explore our products</span>
+            <a
+              href="/configurator"
+              className={styles.heroBtnPrimary}
+              onClick={(e) => {
+                if (this.props.onNavigateConfigurator) {
+                  e.preventDefault();
+                  this.props.onNavigateConfigurator();
+                }
+              }}
+            >
+              <span>Build your foam now</span>
             </a>
 
             <a

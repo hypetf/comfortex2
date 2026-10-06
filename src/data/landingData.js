@@ -109,6 +109,7 @@ export const products = [
     alt: 'Medical mattress in clinical setting',
     ctaText: 'View range',
     link: '#medical-mattresses'
+    // link: '/products#medical-mattresses'
   },
   {
     id: 'foam-products',
@@ -118,6 +119,7 @@ export const products = [
     alt: 'Foam materials and blocks',
     ctaText: 'View range',
     link: '#foam-products'
+    // link: '/products#foam-products'
   },
   {
     id: 'domestic-mattresses',
@@ -127,6 +129,7 @@ export const products = [
     alt: 'Domestic mattress quilted finish',
     ctaText: 'View range',
     link: '#domestic-mattresses'
+    // link: '/products#domestic-mattresses'
   },
   {
     id: 'custom-solutions',
@@ -136,6 +139,7 @@ export const products = [
     alt: 'Custom shaped foam blocks',
     ctaText: 'View range',
     link: '#custom-solutions'
+    // link: '/products#custom-solutions'
   },
   {
     id: 'foam-cut-to-size',
@@ -144,7 +148,7 @@ export const products = [
     image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80',
     alt: 'Dual layer precision cut foam',
     ctaText: 'Configure now',
-    link: '#foam-cut-to-size'
+    link: '/configurator'
   }
 ];
 

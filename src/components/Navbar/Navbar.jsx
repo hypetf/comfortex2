@@ -47,14 +47,39 @@ export class Navbar extends Component {
       <header className={`${styles.navbarHeader} ${scrolled ? styles.navbarScrolled : ''}`}>
         <div className={styles.navbarContainer}>
           {/* Logo */}
-          <a href="#" className={styles.navbarBrand}>
+          <a
+            href="/"
+            className={styles.navbarBrand}
+            onClick={(e) => {
+              if (this.props.onNavigateHome) {
+                e.preventDefault();
+                this.props.onNavigateHome();
+              }
+            }}
+          >
             <img src={logoImg} alt="Comfortex Engineered Comfort" className={styles.navbarLogo} />
           </a>
 
           {/* Desktop Nav Links */}
           <nav className={styles.navbarLinks}>
             {navigationLinks.map((link) => (
-              <a key={link.name} href={link.href} className={styles.navLink}>
+              <a
+                key={link.name}
+                href={link.href}
+                className={styles.navLink}
+                onClick={(e) => {
+                  /* Link to /products commented out for now:
+                  if (link.name === 'Products' || link.href === '/products') {
+                    e.preventDefault();
+                    if (this.props.onNavigateProducts) {
+                      this.props.onNavigateProducts();
+                    }
+                  } else */ if (this.props.currentPage !== 'home' && this.props.onNavigateHome) {
+                    e.preventDefault();
+                    this.props.onNavigateHome(link.href);
+                  }
+                }}
+              >
                 {link.name}
               </a>
             ))}
@@ -62,13 +87,13 @@ export class Navbar extends Component {
 
           {/* CTA Button */}
           <div className={styles.navbarActions}>
-            <button
-              type="button"
+            <a
+              href="tel:01616652420"
               className={styles.navbarQuoteBtn}
-              onClick={onOpenQuote}
+              title="Call us direct: 0161 665 2420"
             >
               Request a Quote
-            </button>
+            </a>
             <a
               href="https://comfortexio.myshopify.com/"
               target="_blank"
@@ -101,18 +126,30 @@ export class Navbar extends Component {
                   key={link.name}
                   href={link.href}
                   className={styles.mobileNavLink}
-                  onClick={this.closeMobileMenu}
+                  onClick={(e) => {
+                    this.closeMobileMenu();
+                    /* Link to /products commented out for now:
+                    if (link.name === 'Products' || link.href === '/products') {
+                      e.preventDefault();
+                      if (this.props.onNavigateProducts) {
+                        this.props.onNavigateProducts();
+                      }
+                    } else */ if (this.props.currentPage !== 'home' && this.props.onNavigateHome) {
+                      e.preventDefault();
+                      this.props.onNavigateHome(link.href);
+                    }
+                  }}
                 >
                   {link.name}
                 </a>
               ))}
-              <button
-                type="button"
+              <a
+                href="tel:01616652420"
                 className={styles.mobileQuoteBtn}
-                onClick={this.handleQuoteClick}
+                onClick={this.closeMobileMenu}
               >
-                Request a Quote
-              </button>
+                Request a Quote (0161 665 2420)
+              </a>
               <a
                 href="https://comfortexio.myshopify.com/"
                 target="_blank"
