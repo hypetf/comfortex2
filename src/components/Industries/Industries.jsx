@@ -1,69 +1,29 @@
 import React from 'react';
+// import { useState } from 'react';
 import styles from './Industries.styles.css';
-import beddingImg from '../../assets/bedding_mattress.webp';
-import medicalImg from '../../assets/medical_mattress.png'
-import furnitureImg from '../../assets/furniture_mattress.webp'
-import marineImg from '../../assets/marine_mattress.webp'
-import carImg from '../../assets/car_seat.jpg'
+// import { IndustryModal } from './IndustryModal';
+import { industriesData } from './industryData';
 
-const industries = [
-  {
-    id: 'healthcare',
-    title: 'Healthcare',
-    description: 'Medical mattresses and pressure care solutions.',
-    image: medicalImg,
-    alt: 'Hospital bed with medical mattress',
-    link: '#healthcare'
-    // link: '/products#medical-mattresses'
-  },
-  {
-    id: 'bedding',
-    title: 'Bedding',
-    description: 'Mattresses and comfort solutions for better sleep.',
-    image: beddingImg,
-    alt: 'Bedding mattress in modern bedroom',
-    link: '#bedding'
-    // link: '/products#domestic-mattresses'
-  },
-  {
-    id: 'furniture',
-    title: 'Furniture',
-    description: 'Foam and components for furniture and seating.',
-    image: furnitureImg,
-    alt: 'Foam furniture armchair',
-    link: '#furniture'
-    // link: '/products#furniture'
-  },
-  {
-    id: 'marine',
-    title: 'Marine',
-    description: 'Engineered foam for marine & boating.',
-    image: marineImg,
-    alt: 'Luxury boat cockpit and seating',
-    link: '#marine'
-    // link: '/products#marine'
-  },
-  {
-    id: 'automotive',
-    title: 'Automotive',
-    description: 'High comfort foam for automotive.',
-    image: carImg,
-    alt: 'Automotive leather interior and seating',
-    link: '#automotive'
-    // link: '/products#automotive'
-  },
-  {
-    id: 'specialist',
-    title: 'Specialist Applications',
-    description: 'Custom solutions for unique challenges.',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
-    alt: 'Specialist custom cut technical foam parts',
-    link: '#specialist'
-    // link: '/products#specialist'
-  }
-];
+const Industries = ({ _onNavigateProducts, _onOpenQuote }) => {
+  // Modal state kept for future use:
+  // const [selectedIndustry, setSelectedIndustry] = useState(null);
 
-const Industries = ({ onNavigateProducts }) => {
+  const handleCardClick = (e, _item) => {
+    e.preventDefault();
+    /* Modal opening on click kept here for future re-activation:
+    setSelectedIndustry(_item);
+    */
+  };
+
+  const handleKeyDown = (e, _item) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      /* Modal opening on click kept here for future re-activation:
+      setSelectedIndustry(_item);
+      */
+    }
+  };
+
   return (
     <section className={styles.industriesSection} id="industries">
       <div className={styles.contentContainer}>
@@ -82,23 +42,20 @@ const Industries = ({ onNavigateProducts }) => {
 
         {/* Connected Industry Poster Cards Grid matching reference */}
         <div className={styles.industriesGrid}>
-          {industries.map((item, index) => {
-            const itemNumber = String(index + 1).padStart(2, '0');
+          {industriesData.map((item, index) => {
+            const itemNumber = item.number || String(index + 1).padStart(2, '0');
 
             return (
               <a
                 key={item.id}
-                href={item.link || '#'}
+                href={`#${item.id}`}
                 className={styles.industryCard}
-                onClick={(e) => {
-                  /* Link to /products commented out for now:
-                  if (onNavigateProducts) {
-                    e.preventDefault();
-                    const hash = item.link.includes('#') ? item.link.substring(item.link.indexOf('#')) : '';
-                    onNavigateProducts(hash);
-                  }
-                  */
-                }}
+                onClick={(e) => handleCardClick(e, item)}
+                onKeyDown={(e) => handleKeyDown(e, item)}
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                title={item.title}
               >
                 {/* Full-bleed background image */}
                 {item.image ? (
@@ -146,13 +103,26 @@ const Industries = ({ onNavigateProducts }) => {
                 <div className={styles.cardContent}>
                   <span className={styles.cardNumber}>{itemNumber}</span>
                   <h3 className={styles.cardTitle}>{item.title}</h3>
-                  <p className={styles.cardDescription}>{item.description}</p>
+                  <p className={styles.cardDescription}>{item.shortDescription || item.description}</p>
                 </div>
               </a>
             );
           })}
         </div>
       </div>
+
+      {/* 90% Fullscreen Standalone Sector Modal with Blurred Glass Effect (Kept in code, commented out for now):
+      <IndustryModal
+        key={selectedIndustry?.id || 'industry-modal'}
+        isOpen={Boolean(selectedIndustry)}
+        industry={selectedIndustry}
+        allIndustries={industriesData}
+        onClose={() => setSelectedIndustry(null)}
+        onSelectIndustry={(ind) => setSelectedIndustry(ind)}
+        onOpenQuote={_onOpenQuote}
+        onNavigateProducts={_onNavigateProducts}
+      />
+      */}
     </section>
   );
 };

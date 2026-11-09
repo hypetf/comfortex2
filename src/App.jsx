@@ -182,7 +182,10 @@ class App extends Component {
             />
 
             {/* 3. Six Industries Section */}
-            <Industries onNavigateProducts={this.handleNavigateProducts} />
+            <Industries
+              onNavigateProducts={this.handleNavigateProducts}
+              onOpenQuote={this.handleOpenQuote}
+            />
             {/* Production Scale & Manufacturing Output */}
             <ProductionScale />
 
@@ -190,7 +193,7 @@ class App extends Component {
             <Capabilities onOpenVideo={this.handleOpenVideo} />
 
             {/* Customer Logos Marquee */}
-            <CustomerLogos />
+            {/* <CustomerLogos /> */}
 
             {/* 6. Products Section */}
             <Products

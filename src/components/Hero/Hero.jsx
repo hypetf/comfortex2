@@ -29,7 +29,7 @@ export class Hero extends Component {
             <h1 className={styles.heroHeadline}>
               <span className={styles.heroTextWhite}>Quality comfort products.</span>
               <br />
-              <span className={styles.heroTextGold}>Made in Oldham.</span>
+              <span className={styles.heroTextGold}>Made in Manchester.</span>
             </h1>
 
             <p className={styles.heroDescription}>
